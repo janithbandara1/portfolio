@@ -52,7 +52,15 @@ export const skillGroups = [
   },
 ];
 
-export const projects = [
+export type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  href: string;
+  repo: string;
+};
+
+export const projects: Project[] = [
   {
     title: "SaaS Engagement Platform",
     description:
