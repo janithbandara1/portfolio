@@ -95,29 +95,36 @@ export const projects: Project[] = [
   },
 ];
 
-export const experience = [
+export type ExperienceRole = {
+  role: string;
+  period: string;
+  description: string;
+  tags: string[];
+};
+
+export type ExperienceEntry = {
+  company: string;
+  roles: ExperienceRole[];
+};
+
+export const experience: ExperienceEntry[] = [
   {
-    role: "Full-Stack Developer",
     company: "X4 Digital Labs",
-    period: "2024 — Present",
-    description:
-      "Building and maintaining SaaS products with Next.js and Node.js, including a restaurant engagement platform and a ride-booking application.",
-    tags: ["Next.js", "TypeScript", "Node.js"],
-  },
-  {
-    role: "Software Developer",
-    company: "Pearly Sky Company",
-    period: "2023 — 2024",
-    description:
-      "Developed and maintained backend systems and internal tools using Laravel and PHP, working closely with stakeholders to ship features end-to-end.",
-    tags: ["Laravel", "PHP", "MySQL"],
-  },
-  {
-    role: "Junior Web Developer",
-    company: "Freelance",
-    period: "2022 — 2023",
-    description:
-      "Delivered websites and small web applications for local clients, handling everything from design to deployment.",
-    tags: ["React", "JavaScript", "CSS"],
+    roles: [
+      {
+        role: "Software Engineer",
+        period: "2024 — Present",
+        description:
+          "Building and maintaining SaaS products with Next.js and Node.js, including a restaurant engagement platform and a ride-booking application.",
+        tags: ["Next.js", "TypeScript", "Node.js"],
+      },
+      {
+        role: "Intern Software Engineer",
+        period: "2023 — 2024",
+        description:
+          "Contributed to frontend and backend features across internal tools, learning the team's workflow with React, Next.js, and REST APIs.",
+        tags: ["React", "Next.js", "REST APIs"],
+      },
+    ],
   },
 ];
