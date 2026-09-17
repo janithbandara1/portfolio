@@ -31,11 +31,6 @@ export const about = {
     "I'm a full-stack developer specializing in building modern web applications with React, Next.js, and Node.js, alongside backend systems in Laravel and PHP. I enjoy turning ideas into polished, production-ready products — from database design and API architecture to pixel-perfect, accessible interfaces.",
     "I'm always learning and exploring new tools, and I care deeply about writing clean, maintainable code and delivering work that solves real problems for real users.",
   ],
-  highlights: [
-    { label: "Years of experience", value: "3+" },
-    { label: "Projects delivered", value: "20+" },
-    { label: "Technologies", value: "15+" },
-  ],
 };
 
 export const skillGroups = [

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { about } from "@/lib/data";
 
@@ -19,20 +20,18 @@ export function About() {
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-          {about.highlights.map((item) => (
-            <Card key={item.label} className="text-center">
-              <CardContent className="flex flex-col items-center gap-1 py-6">
-                <span className="text-2xl font-semibold tracking-tight">
-                  {item.value}
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  {item.label}
-                </span>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Card className="mx-auto w-full max-w-64 overflow-hidden py-0">
+          <CardContent className="p-0">
+            <div className="relative aspect-square w-full">
+              <Image
+                src="/profile.jpg"
+                alt="Janith Bandara"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
