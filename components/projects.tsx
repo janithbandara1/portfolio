@@ -16,7 +16,7 @@ export function Projects() {
   return (
     <section id="projects" className="mx-auto w-full max-w-5xl px-6 py-24">
       <div className="mb-12 flex flex-col gap-3">
-        <p className="text-sm font-medium text-muted-foreground">Projects</p>
+        <p className="text-sm font-medium text-primary">Projects</p>
         <h2 className="text-3xl font-semibold tracking-tight">
           Things I&apos;ve built
         </h2>

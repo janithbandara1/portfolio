@@ -12,7 +12,7 @@ export function Contact() {
   return (
     <section id="contact" className="mx-auto w-full max-w-5xl px-6 py-24">
       <div className="mb-12 flex flex-col gap-3">
-        <p className="text-sm font-medium text-muted-foreground">Contact</p>
+        <p className="text-sm font-medium text-primary">Contact</p>
         <h2 className="text-3xl font-semibold tracking-tight">
           Let&apos;s work together
         </h2>

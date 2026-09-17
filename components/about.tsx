@@ -6,7 +6,7 @@ export function About() {
     <section id="about" className="mx-auto w-full max-w-5xl px-6 py-24">
       <div className="grid gap-12 md:grid-cols-2 md:items-center">
         <div className="flex flex-col gap-4">
-          <p className="text-sm font-medium text-muted-foreground">
+          <p className="text-sm font-medium text-primary">
             About me
           </p>
           <h2 className="text-3xl font-semibold tracking-tight">
