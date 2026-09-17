@@ -19,7 +19,7 @@ export const navLinks = [
 ];
 
 export const hero = {
-  greeting: `Hi, I'm ${siteConfig.name}`,
+  availability: "Available for new opportunities",
   headline: "Full-Stack Developer building fast, reliable web products.",
   description:
     "I design and build modern web applications end-to-end — from interfaces in React and Next.js to APIs and databases that power them. Currently focused on crafting clean, performant products.",

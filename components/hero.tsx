@@ -9,9 +9,13 @@ export function Hero() {
       id="home"
       className="mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 py-28 sm:py-36"
     >
-      <p className="text-sm font-medium text-muted-foreground">
-        {hero.greeting}
-      </p>
+      <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+        </span>
+        {hero.availability}
+      </div>
       <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-6xl">
         {hero.headline}
       </h1>
