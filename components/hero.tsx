@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import { CodeSnippet } from "@/components/code-snippet";
 import { hero, siteConfig } from "@/lib/data";
 
 export function Hero() {
@@ -67,49 +68,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto hidden w-full max-w-md overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl md:block">
-          <div className="flex items-center gap-1.5 border-b border-zinc-800 px-4 py-2.5">
-            <span className="size-2.5 rounded-full bg-red-500" />
-            <span className="size-2.5 rounded-full bg-yellow-500" />
-            <span className="size-2.5 rounded-full bg-green-500" />
-            <span className="ml-3 text-xs text-zinc-500">profile.ts</span>
-          </div>
-          <pre className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed">
-            <code>
-              <span className="text-purple-400">const</span>{" "}
-              <span className="text-blue-400">developer</span>{" "}
-              <span className="text-zinc-400">=</span>{" "}
-              <span className="text-zinc-400">{"{"}</span>
-              {"\n  "}
-              <span className="text-sky-300">name</span>
-              <span className="text-zinc-400">:</span>{" "}
-              <span className="text-emerald-400">&quot;{siteConfig.name}&quot;</span>
-              <span className="text-zinc-400">,</span>
-              {"\n  "}
-              <span className="text-sky-300">role</span>
-              <span className="text-zinc-400">:</span>{" "}
-              <span className="text-emerald-400">&quot;{siteConfig.role}&quot;</span>
-              <span className="text-zinc-400">,</span>
-              {"\n  "}
-              <span className="text-sky-300">stack</span>
-              <span className="text-zinc-400">:</span>{" "}
-              <span className="text-zinc-400">[</span>
-              <span className="text-emerald-400">&quot;React&quot;</span>
-              <span className="text-zinc-400">, </span>
-              <span className="text-emerald-400">&quot;Next.js&quot;</span>
-              <span className="text-zinc-400">, </span>
-              <span className="text-emerald-400">&quot;Node.js&quot;</span>
-              <span className="text-zinc-400">],</span>
-              {"\n  "}
-              <span className="text-sky-300">hireable</span>
-              <span className="text-zinc-400">:</span>{" "}
-              <span className="text-orange-400">true</span>
-              <span className="text-zinc-400">,</span>
-              {"\n"}
-              <span className="text-zinc-400">{"};"}</span>
-            </code>
-          </pre>
-        </div>
+        <CodeSnippet />
+
+
       </div>
     </section>
   );
