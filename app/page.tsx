@@ -6,6 +6,7 @@ import { Projects } from "@/components/projects";
 import { Experience } from "@/components/experience";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -13,10 +14,15 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-1 flex-col">
         <Hero />
+        <Separator />
         <About />
+        <Separator />
         <Skills />
+        <Separator />
         <Projects />
+        <Separator />
         <Experience />
+        <Separator />
         <Contact />
       </main>
       <Footer />
