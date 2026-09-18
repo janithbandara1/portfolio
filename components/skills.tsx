@@ -4,7 +4,7 @@ import { skillGroups } from "@/lib/data";
 
 export function Skills() {
   return (
-    <section id="skills" className="bg-muted">
+    <section id="skills">
       <div className="mx-auto w-full max-w-5xl px-6 py-24">
         <div className="mb-12 flex flex-col gap-3">
           <p className="text-sm font-medium text-primary">

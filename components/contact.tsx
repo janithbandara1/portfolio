@@ -6,53 +6,55 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function Contact() {
   return (
-    <section id="contact" className="mx-auto w-full max-w-5xl px-6 py-24">
-      <div className="mb-12 flex flex-col gap-3">
-        <p className="text-sm font-medium text-primary">Contact</p>
-        <h2 className="text-3xl font-semibold tracking-tight">
-          Let&apos;s work together
-        </h2>
-      </div>
+    <section id="contact" className="bg-muted">
+      <div className="mx-auto w-full max-w-5xl px-6 py-24">
+        <div className="mb-12 flex flex-col gap-3">
+          <p className="text-sm font-medium text-primary">Contact</p>
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Let&apos;s work together
+          </h2>
+        </div>
 
-      <Card>
-        <CardContent>
-          <form className="flex flex-col gap-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your name" required />
+        <Card>
+          <CardContent>
+            <form className="flex flex-col gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
+                <Label htmlFor="subject">Subject</Label>
+                <Input id="subject" name="subject" placeholder="What's this about?" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about your project..."
+                  rows={5}
                   required
                 />
               </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="subject">Subject</Label>
-              <Input id="subject" name="subject" placeholder="What's this about?" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder="Tell me about your project..."
-                rows={5}
-                required
-              />
-            </div>
-            <Button type="submit" className="self-start">
-              Send message
-            </Button>
-          </form>
-        </CardContent>
-      </Card>
+              <Button type="submit" className="self-start">
+                Send message
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </section>
   );
 }
