@@ -1,6 +1,6 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { hero, siteConfig } from "@/lib/data";
 
 export function Hero() {
@@ -40,29 +40,22 @@ export function Hero() {
 
       <div className="mt-4 flex items-center gap-4 text-muted-foreground">
         <a
-          href={siteConfig.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="transition-colors hover:text-foreground"
-        >
-          <GitHubIcon className="size-5" />
-        </a>
-        <a
           href={siteConfig.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
           className="transition-colors hover:text-foreground"
         >
-          <LinkedInIcon className="size-5" />
+          <FaLinkedin className="size-5" />
         </a>
         <a
-          href={`mailto:${siteConfig.email}`}
-          aria-label="Email"
+          href={siteConfig.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
           className="transition-colors hover:text-foreground"
         >
-          <Mail className="size-5" />
+          <FaGithub className="size-5" />
         </a>
       </div>
     </section>

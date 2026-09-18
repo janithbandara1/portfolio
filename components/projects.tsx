@@ -1,7 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GitHubIcon } from "@/components/icons";
 import { projects } from "@/lib/data";
 
 function getInitials(title: string) {
@@ -40,22 +39,13 @@ export function Projects() {
             <CardContent className="p-6">
               <div className="flex items-start justify-between gap-4">
                 <p className="text-base font-medium">{project.title}</p>
-                <div className="flex shrink-0 gap-3">
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.title} repository`}
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <GitHubIcon className="size-5" />
-                  </a>
+                <div className="flex shrink-0 gap-3 text-muted-foreground">
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} live site`}
-                    className="text-muted-foreground transition-colors hover:text-primary"
+                    className="transition-colors hover:text-foreground"
                   >
                     <ExternalLink className="size-5" />
                   </a>
