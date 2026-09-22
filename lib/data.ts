@@ -19,42 +19,35 @@ export const navLinks = [
 ];
 
 export const hero = {
-  availability: "Available for new opportunities",
-  headline: "Full-Stack Developer building fast, reliable web products.",
+  availability: "Open to work",
+  headline: "Hi, I'm Janith Bandara",
   description:
-    "I design and build modern web applications end-to-end — from interfaces in React and Next.js to APIs and databases that power them. Currently focused on crafting clean, performant products.",
+    "I'm a Software Engineer with experience building full-stack web applications using the JavaScript/TypeScript stack.",
 };
 
 export const about = {
-  heading: "A developer who cares about the details.",
+  heading: "Who I Am",
   paragraphs: [
-    "I'm a full-stack developer specializing in building modern web applications with React, Next.js, and Node.js, alongside backend systems in Laravel and PHP. I enjoy turning ideas into polished, production-ready products — from database design and API architecture to pixel-perfect, accessible interfaces.",
-    "I'm always learning and exploring new tools, and I care deeply about writing clean, maintainable code and delivering work that solves real problems for real users.",
+    "I'm Janith Bandara, an Associate Software Engineer at X4 Digital Labs in Mawanella, Sri Lanka. I build SaaS platforms for restaurants and hospitality, including multi tenant systems, POS integrations, and real time order tracking.",
+    "Outside of work, I build my own products, including an AI  SaaS that turns podcasts into short form clips, an e commerce platform for spare parts, and a course platform with purchasing price parity.",
+    "I mainly work with the JavaScript/TypeScript stack. I enjoy every phase of the software development life cycle, from planning to deployment.",
   ],
 };
 
 export const skillGroups = [
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML & CSS"],
+    title: "Programming Languages",
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "SQL"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Laravel", "PHP", "REST APIs", "Express"],
-  },
-  {
-    title: "Database",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Prisma"],
-  },
-  {
-    title: "Tools & Platforms",
-    skills: ["Git", "Docker", "Vercel", "Figma", "Linux"],
+    title: "Tools and Technologies",
+    skills: ["React", "Next.js", "Tailwind CSS", "Redux", "Node.js", "NestJS", "FastAPI", "PostgreSQL", "Prisma", "TypeORM", "Drizzle ORM", "Docker", "Git/GitHub", "AWS"],
   },
 ];
 
 export type Project = {
   title: string;
-  description: string;
+  bullets: string[];
   tags: string[];
   href: string;
   repo: string;
@@ -62,34 +55,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "SaaS Engagement Platform",
-    description:
-      "A multi-tenant SaaS platform for restaurants to manage orders, menus, and customer engagement in real time.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    title: "AI Podcast Clipper SaaS",
+    bullets: [
+      "Full-stack AI SaaS that generates viral short-form clips from podcasts.",
+      "Used Gemini 2.5 for content analysis and WhisperX for transcription, with OpenCV-based speaker detection to convert horizontal video into vertical 9:16 format.",
+      "Built serverless GPU rendering with Modal and background job processing with Inngest.",
+      "Integrated Stripe for credit-based billing with a real-time status dashboard.",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "FastAPI", "Modal", "Amazon S3"],
     href: "#",
     repo: "#",
   },
   {
-    title: "Ride Booking App",
-    description:
-      "A ride-hailing web app with driver and rider flows, live trip tracking, and multi-language support.",
-    tags: ["Next.js", "React", "Node.js"],
+    title: "Course platform LMS⁠",
+    bullets: [
+      "Full-stack Next.js learning management system with admin content management, enrollment, and lesson tracking.",
+      "Integrated secure payment processing with purchasing power parity pricing.",
+      "Optimized server actions and caching for faster page loads, with role-based authentication securing user and admin routes.",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
     href: "#",
     repo: "#",
   },
   {
-    title: "Business Management System",
-    description:
-      "An internal system for managing operations, inventory, and reporting for a growing business.",
-    tags: ["Laravel", "PHP", "MySQL"],
-    href: "#",
-    repo: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio built with Next.js and shadcn/ui to showcase projects and experience.",
-    tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
+    title: "Spare Parts Web Application",
+    bullets: [
+      "Full-stack e-commerce platform for automotive spare parts management, built with Next.js 16, React 19, TypeScript, PostgreSQL, and Prisma.",
+      "Features a server-side rendered product catalog with filtering by brand, model, and condition, plus a role-based admin system with secure authentication for inventory and media management.",
+      "Integrated Cloudinary for media storage and WhatsApp inquiry workflows.",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma"],
     href: "#",
     repo: "#",
   },
@@ -98,7 +93,7 @@ export const projects: Project[] = [
 export type ExperienceRole = {
   role: string;
   period: string;
-  description: string;
+  bullets: string[];
   tags: string[];
 };
 
@@ -112,18 +107,25 @@ export const experience: ExperienceEntry[] = [
     company: "X4 Digital Labs",
     roles: [
       {
-        role: "Software Engineer",
-        period: "2024 — Present",
-        description:
-          "Building and maintaining SaaS products with Next.js and Node.js, including a restaurant engagement platform and a ride-booking application.",
-        tags: ["Next.js", "TypeScript", "Node.js"],
+        role: "Associate Software Engineer",
+        period: "Jan 2026 — Present",
+        bullets: [
+          "Led the rebuild of a food ordering application using Next.js and NestJS, successfully integrating POS systems, menu management, and real-time order tracking.",
+          "Collaborated with cross-functional teams to develop a multi-tenant SaaS platform for an All-in-One Restaurant Solution, utilizing a microservices architecture with NestJS.",
+          "Contributed to the ongoing development and maintenance of restaurant and hospitality applications to enhance workflows and user experience.",
+        ],
+        tags: ["Next.js", "Tailwind CSS", "NestJS", "PostgreSQL", "TypeORM", "Docker", "Git/GitHub"],
       },
       {
         role: "Intern Software Engineer",
-        period: "2023 — 2024",
-        description:
-          "Contributed to frontend and backend features across internal tools, learning the team's workflow with React, Next.js, and REST APIs.",
-        tags: ["React", "Next.js", "REST APIs"],
+        period: "Jul 2025 — Dec 2025",
+        bullets: [
+          "Developed a web-based food ordering platform with integrated payment gateways to ensure 100% secure and seamless transactions.",
+          "Enabled real-time order processing through Oracle Simphony POS integration, which improved order accuracy by 100%.",
+          "Contributed to a scalable SaaS Restaurant Management System using Next.js, PostgreSQL, and Prisma, focusing on performance and maintainability.",
+          "Dockerized applications, resulting in a 50% reduction in deployment time and improved system scalability.",
+        ],
+        tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma", "Docker", "Git/GitHub"],
       },
     ],
   },

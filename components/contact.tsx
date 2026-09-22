@@ -11,7 +11,7 @@ export function Contact() {
         <div className="mb-12 flex flex-col gap-3">
           <p className="text-sm font-medium text-primary">Contact</p>
           <h2 className="text-3xl font-semibold tracking-tight">
-            Let&apos;s work together
+            Get in Touch
           </h2>
         </div>
 

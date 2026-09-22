@@ -11,7 +11,7 @@ export function Skills() {
             Skills
           </p>
           <h2 className="text-3xl font-semibold tracking-tight">
-            Technologies I work with
+            My Toolbox
           </h2>
         </div>
 

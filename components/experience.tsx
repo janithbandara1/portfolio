@@ -58,9 +58,11 @@ export function Experience() {
                               <p className="text-sm text-muted-foreground">
                                 {item.period}
                               </p>
-                              <p className="mt-2 text-sm text-muted-foreground">
-                                {item.description}
-                              </p>
+                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                                {item.bullets.map((bullet) => (
+                                  <li key={bullet}>{bullet}</li>
+                                ))}
+                              </ul>
                               <div className="flex flex-wrap gap-2 pt-2">
                                 {item.tags.map((tag) => (
                                   <Badge key={tag} variant="secondary">

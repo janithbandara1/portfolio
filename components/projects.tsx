@@ -53,9 +53,11 @@ export function Projects() {
                   </div>
                 </div>
 
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {project.description}
-                </p>
+                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                  {project.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
 
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
