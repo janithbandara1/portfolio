@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { CodeSnippet } from "@/components/code-snippet";
-import { hero, siteConfig } from "@/lib/data";
+import { hero } from "@/lib/data";
 
 export function Hero() {
   return (
@@ -46,7 +46,7 @@ export function Hero() {
 
           <div className="mt-4 flex items-center gap-4 text-muted-foreground">
             <a
-              href={siteConfig.social.linkedin}
+              href="https://www.linkedin.com/in/janithbandara1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -55,7 +55,7 @@ export function Hero() {
               <FaLinkedin className="size-5" />
             </a>
             <a
-              href={siteConfig.social.github}
+              href="https://github.com/janithbandara1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

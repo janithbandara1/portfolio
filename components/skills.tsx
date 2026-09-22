@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { skillGroups } from "@/lib/data";
+import { skills } from "@/lib/data";
 
 export function Skills() {
   return (
@@ -16,7 +16,7 @@ export function Skills() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {skillGroups.map((group) => (
+          {skills.map((group) => (
             <Card key={group.title}>
               <CardHeader>
                 <CardTitle>{group.title}</CardTitle>

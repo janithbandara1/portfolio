@@ -1,23 +1,3 @@
-export const siteConfig = {
-  name: "Janith Bandara",
-  role: "Full-Stack Developer",
-  email: "janithbandara001@gmail.com",
-  location: "Sri Lanka",
-  social: {
-    github: "https://github.com/janithbandara1",
-    linkedin: "https://www.linkedin.com/in/janithbandara1",
-  },
-};
-
-export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
-];
-
 export const hero = {
   availability: "Open to work",
   headline: "Hi, I'm Janith Bandara",
@@ -34,7 +14,7 @@ export const about = {
   ],
 };
 
-export const skillGroups = [
+export const skills = [
   {
     title: "Programming Languages",
     skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "SQL"],
@@ -50,7 +30,6 @@ export type Project = {
   bullets: string[];
   tags: string[];
   href: string;
-  repo: string;
 };
 
 export const projects: Project[] = [
@@ -64,7 +43,6 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "FastAPI", "Modal", "Amazon S3"],
     href: "#",
-    repo: "#",
   },
   {
     title: "Course platform LMS⁠",
@@ -75,7 +53,6 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
     href: "#",
-    repo: "#",
   },
   {
     title: "Spare Parts Web Application",
@@ -86,7 +63,6 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma"],
     href: "#",
-    repo: "#",
   },
 ];
 
