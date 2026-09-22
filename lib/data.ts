@@ -106,3 +106,8 @@ export const experience: ExperienceEntry[] = [
     ],
   },
 ];
+
+export const contact = {
+  email: "janithbandara001@gmail.com",
+  phone: "+94 76 180 1425",
+};

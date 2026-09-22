@@ -1,8 +1,10 @@
+import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { contact } from "@/lib/data";
 
 export function Contact() {
   return (
@@ -15,33 +17,60 @@ export function Contact() {
           </h2>
         </div>
 
-        <Card>
-          <CardContent>
-            <form className="flex flex-col gap-4">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" required />
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <Card>
+              <CardContent>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <Mail className="size-5 shrink-0" />
+                  {contact.email}
+                </a>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <a
+                  href={`tel:${contact.phone}`}
+                  className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <Phone className="size-5 shrink-0" />
+                  {contact.phone}
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card>
+            <CardContent>
+              <form className="flex flex-col gap-4">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" name="name" required />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" name="email" type="email" required />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" required />
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input id="subject" name="subject" />
                 </div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" name="subject" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" rows={5} required />
-              </div>
-              <Button type="submit" className="self-start">
-                Send message
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" name="message" rows={5} required />
+                </div>
+                <Button type="submit" className="self-start">
+                  Send message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
