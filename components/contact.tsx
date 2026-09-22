@@ -21,32 +21,20 @@ export function Contact() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" placeholder="Your name" required />
+                  <Input id="name" name="name" required />
                 </div>
                 <div className="flex flex-col gap-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="you@example.com"
-                    required
-                  />
+                  <Input id="email" name="email" type="email" required />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" name="subject" placeholder="What's this about?" />
+                <Input id="subject" name="subject" />
               </div>
               <div className="flex flex-col gap-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  required
-                />
+                <Textarea id="message" name="message" rows={5} required />
               </div>
               <Button type="submit" className="self-start">
                 Send message
