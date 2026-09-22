@@ -1,29 +1,22 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { siteConfig } from "@/lib/data";
 
 type Token = { text: string; className?: string };
 
 const tokens: Token[] = [
   { text: "const", className: "text-purple-400" },
   { text: " " },
-  { text: "developer", className: "text-blue-400" },
+  { text: "janith", className: "text-blue-400" },
   { text: " " },
   { text: "=", className: "text-zinc-400" },
   { text: " " },
   { text: "{", className: "text-zinc-400" },
   { text: "\n  " },
-  { text: "name", className: "text-sky-300" },
-  { text: ":", className: "text-zinc-400" },
-  { text: " " },
-  { text: `"${siteConfig.name}"`, className: "text-emerald-400" },
-  { text: ",", className: "text-zinc-400" },
-  { text: "\n  " },
   { text: "role", className: "text-sky-300" },
   { text: ":", className: "text-zinc-400" },
   { text: " " },
-  { text: `"${siteConfig.role}"`, className: "text-emerald-400" },
+  { text: '"Associate Software Engineer"', className: "text-emerald-400" },
   { text: ",", className: "text-zinc-400" },
   { text: "\n  " },
   { text: "stack", className: "text-sky-300" },
@@ -35,9 +28,17 @@ const tokens: Token[] = [
   { text: '"Next.js"', className: "text-emerald-400" },
   { text: ", ", className: "text-zinc-400" },
   { text: '"Node.js"', className: "text-emerald-400" },
+  { text: ", ", className: "text-zinc-400" },
+  { text: '"NestJS"', className: "text-emerald-400" },
   { text: "],", className: "text-zinc-400" },
   { text: "\n  " },
-  { text: "hireable", className: "text-sky-300" },
+  { text: "location", className: "text-sky-300" },
+  { text: ":", className: "text-zinc-400" },
+  { text: " " },
+  { text: '"Kandy, Sri Lanka"', className: "text-emerald-400" },
+  { text: ",", className: "text-zinc-400" },
+  { text: "\n  " },
+  { text: "isAvailable", className: "text-sky-300" },
   { text: ":", className: "text-zinc-400" },
   { text: " " },
   { text: "true", className: "text-orange-400" },
@@ -112,11 +113,13 @@ export function CodeSnippet() {
 
   return (
     <div className="mx-auto hidden w-full max-w-md overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl md:block">
-      <div className="flex items-center gap-1.5 border-b border-zinc-800 px-4 py-2.5">
+      <div className="relative flex items-center gap-1.5 px-4 py-2.5">
         <span className="size-2.5 rounded-full bg-red-500" />
         <span className="size-2.5 rounded-full bg-yellow-500" />
         <span className="size-2.5 rounded-full bg-green-500" />
-        <span className="ml-3 text-xs text-zinc-500">profile.ts</span>
+        <span className="absolute left-1/2 -translate-x-1/2 text-xs text-zinc-500">
+          Untitled
+        </span>
       </div>
       <pre className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed">
         <code>

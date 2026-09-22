@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { CodeSnippet } from "@/components/code-snippet";
@@ -34,7 +33,6 @@ export function Hero() {
           <div className="mt-2 flex flex-wrap items-center gap-3">
             <Button size="lg" nativeButton={false} render={<a href="#projects" />}>
               View my work
-              <ArrowRight />
             </Button>
             <Button
               variant="outline"

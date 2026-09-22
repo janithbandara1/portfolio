@@ -5,7 +5,7 @@ export const siteConfig = {
   location: "Sri Lanka",
   social: {
     github: "https://github.com/janithbandara1",
-    linkedin: "https://linkedin.com/in/janithbandara",
+    linkedin: "https://www.linkedin.com/in/janithbandara1",
   },
 };
 
