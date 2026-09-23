@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Janith Bandara — Full-Stack Developer",
+  title: "Janith Bandara",
   description:
-    "Portfolio of Janith Bandara, a full-stack developer specializing in React, Next.js, and Laravel.",
+    "Janith Bandara is a software engineer who builds fast, reliable full-stack web applications.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
