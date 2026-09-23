@@ -58,7 +58,7 @@ export function Experience() {
                               <p className="text-sm text-muted-foreground">
                                 {item.period}
                               </p>
-                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-primary">
                                 {item.bullets.map((bullet) => (
                                   <li key={bullet}>{bullet}</li>
                                 ))}

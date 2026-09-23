@@ -5,7 +5,7 @@ import { hero } from "@/lib/data";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 to-background"
         aria-hidden="true"

@@ -31,7 +31,7 @@ export function Projects() {
               className="grid gap-0 overflow-hidden p-0 sm:grid-cols-2"
             >
               <div className="p-6">
-                <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/15 via-muted/40 to-transparent">
+                <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-primary/15 via-muted/40 to-transparent">
                   {project.image ? (
                     <Image
                       src={project.image}
@@ -63,7 +63,7 @@ export function Projects() {
                   </div>
                 </div>
 
-                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-primary">
                   {project.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
