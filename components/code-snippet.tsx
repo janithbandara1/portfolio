@@ -118,7 +118,7 @@ export function CodeSnippet() {
         <span className="size-2.5 rounded-full bg-yellow-500" />
         <span className="size-2.5 rounded-full bg-green-500" />
         <span className="absolute left-1/2 -translate-x-1/2 text-xs text-zinc-500">
-          Untitled
+          profile.ts
         </span>
       </div>
       <pre className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed">

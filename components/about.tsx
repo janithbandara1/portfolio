@@ -25,7 +25,7 @@ export function About() {
             <CardContent className="p-0">
               <div className="relative aspect-square w-full">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt="Janith Bandara"
                   fill
                   className="object-cover"

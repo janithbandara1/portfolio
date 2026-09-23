@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -30,10 +31,19 @@ export function Projects() {
               className="grid gap-0 overflow-hidden p-0 sm:grid-cols-2"
             >
               <div className="p-6">
-                <div className="flex aspect-video w-full items-center justify-center rounded-xl bg-gradient-to-br from-primary/15 via-muted/40 to-transparent">
-                  <span className="font-mono text-4xl font-bold text-muted-foreground/20">
-                    {getInitials(project.title)}
-                  </span>
+                <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/15 via-muted/40 to-transparent">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <span className="font-mono text-4xl font-bold text-muted-foreground/20">
+                      {getInitials(project.title)}
+                    </span>
+                  )}
                 </div>
               </div>
 

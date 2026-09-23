@@ -30,6 +30,7 @@ export type Project = {
   bullets: string[];
   tags: string[];
   href: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -42,7 +43,8 @@ export const projects: Project[] = [
       "Integrated Stripe for credit-based billing with a real-time status dashboard.",
     ],
     tags: ["Next.js", "Tailwind CSS", "FastAPI", "Modal", "Amazon S3"],
-    href: "#",
+    href: "https://ai-podcast-clipper-frontend-pi.vercel.app",
+    image: "/projects/ai-podcast-clipper.png",
   },
   {
     title: "Course platform LMS⁠",
@@ -52,7 +54,8 @@ export const projects: Project[] = [
       "Optimized server actions and caching for faster page loads, with role-based authentication securing user and admin routes.",
     ],
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
-    href: "#",
+    href: "https://course-platform-lms.vercel.app",
+    image: "/projects/course-platform-lms.png",
   },
   {
     title: "Spare Parts Web Application",
@@ -62,7 +65,8 @@ export const projects: Project[] = [
       "Integrated Cloudinary for media storage and WhatsApp inquiry workflows.",
     ],
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma"],
-    href: "#",
+    href: "https://hexadrive.vercel.app",
+    image: "/projects/spare-parts.png",
   },
 ];
 
