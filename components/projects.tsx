@@ -63,7 +63,7 @@ export function Projects() {
                   </div>
                 </div>
 
-                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-primary">
+                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
                   {project.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}

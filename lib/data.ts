@@ -79,12 +79,14 @@ export type ExperienceRole = {
 
 export type ExperienceEntry = {
   company: string;
+  logo?: string;
   roles: ExperienceRole[];
 };
 
 export const experience: ExperienceEntry[] = [
   {
     company: "X4 Digital Labs",
+    logo: "/logos/x4-digital-labs.png",
     roles: [
       {
         role: "Associate Software Engineer",

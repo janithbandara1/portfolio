@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { experience } from "@/lib/data";
 
 function getInitials(company: string) {
@@ -33,6 +33,13 @@ export function Experience() {
                   <Avatar
                     className="mt-0.5 size-12 rounded-lg after:rounded-lg"
                   >
+                    {entry.logo && (
+                      <AvatarImage
+                        src={entry.logo}
+                        alt={entry.company}
+                        className="rounded-lg bg-white object-contain p-1.5"
+                      />
+                    )}
                     <AvatarFallback className="rounded-lg">
                       {getInitials(entry.company)}
                     </AvatarFallback>
@@ -58,7 +65,7 @@ export function Experience() {
                               <p className="text-sm text-muted-foreground">
                                 {item.period}
                               </p>
-                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground marker:text-primary">
+                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
                                 {item.bullets.map((bullet) => (
                                   <li key={bullet}>{bullet}</li>
                                 ))}

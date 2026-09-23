@@ -21,7 +21,7 @@ export function About() {
             ))}
           </div>
 
-          <Card className="mx-auto w-full max-w-64 overflow-hidden py-0">
+          <Card className="mx-auto w-full max-w-64 overflow-hidden border border-border py-0">
             <CardContent className="p-0">
               <div className="relative aspect-square w-full">
                 <Image
