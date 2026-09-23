@@ -8,7 +8,7 @@ import { contact } from "@/lib/data";
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-muted/20">
+    <section id="contact">
       <div className="mx-auto w-full max-w-5xl px-6 py-24">
         <div className="mb-12 flex flex-col gap-3">
           <p className="text-sm font-medium text-primary">Contact</p>

@@ -113,6 +113,28 @@ export const experience: ExperienceEntry[] = [
   },
 ];
 
+export type EducationEntry = {
+  institution: string;
+  degree: string;
+  period: string;
+  logo?: string;
+};
+
+export const education: EducationEntry[] = [
+  {
+    institution: "London Metropolitan University",
+    degree: "BEng (Hons) in Software Engineering (Top Up)",
+    period: "Feb 2024 — Feb 2025",
+    logo: "/logos/london-metropolitan-university.png",
+  },
+  {
+    institution: "ESOFT Metro Campus",
+    degree: "Level 5 Pearson BTEC HND in Computing (Software Engineering)",
+    period: "Aug 2022 — Feb 2024",
+    logo: "/logos/esoft-metro-campus.png",
+  },
+];
+
 export const contact = {
   email: "janithbandara001@gmail.com",
   phone: "+94 76 180 1425",

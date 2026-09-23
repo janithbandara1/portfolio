@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { experience } from "@/lib/data";
 
 function getInitials(company: string) {
@@ -30,20 +30,20 @@ export function Experience() {
             <Card key={entry.company}>
               <CardContent>
                 <div className="flex gap-4">
-                  <Avatar
-                    className="mt-0.5 size-12 rounded-lg after:rounded-lg"
-                  >
-                    {entry.logo && (
-                      <AvatarImage
+                  <div className="relative mt-0.5 flex size-12 flex-none items-center justify-center overflow-hidden rounded-lg border border-border bg-muted">
+                    {entry.logo ? (
+                      <Image
                         src={entry.logo}
                         alt={entry.company}
-                        className="rounded-lg bg-white object-contain p-1.5"
+                        fill
+                        className="object-contain"
                       />
+                    ) : (
+                      <span className="text-sm font-medium text-muted-foreground">
+                        {getInitials(entry.company)}
+                      </span>
                     )}
-                    <AvatarFallback className="rounded-lg">
-                      {getInitials(entry.company)}
-                    </AvatarFallback>
-                  </Avatar>
+                  </div>
                   <div className="flex flex-1 flex-col">
                     <p className="text-base font-medium">{entry.company}</p>
                     <div className="mt-2 flex flex-col">
