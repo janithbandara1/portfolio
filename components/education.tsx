@@ -13,7 +13,7 @@ function getInitials(institution: string) {
 
 export function Education() {
   return (
-    <section id="education" className="bg-muted/20">
+    <section id="education" className="bg-muted">
       <div className="mx-auto w-full max-w-5xl px-6 py-24">
         <div className="mb-12 flex flex-col gap-3">
           <p className="text-sm font-medium text-primary">Education</p>

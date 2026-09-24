@@ -4,7 +4,7 @@ import { about } from "@/lib/data";
 
 export function About() {
   return (
-    <section id="about" className="bg-muted/20">
+    <section id="about" className="bg-muted">
       <div className="mx-auto w-full max-w-5xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="flex flex-col gap-4">
