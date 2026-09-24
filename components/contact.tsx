@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +9,38 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { contact } from "@/lib/data";
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export function Contact() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact">
       <div className="mx-auto w-full max-w-5xl px-6 py-24">
@@ -45,7 +79,7 @@ export function Contact() {
 
           <Card>
             <CardContent>
-              <form className="flex flex-col gap-4">
+              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-2">
                     <Label htmlFor="name">Name</Label>
@@ -64,9 +98,19 @@ export function Contact() {
                   <Label htmlFor="message">Message</Label>
                   <Textarea id="message" name="message" rows={5} required />
                 </div>
-                <Button type="submit" className="self-start">
-                  Send message
+                <Button type="submit" className="self-start" disabled={status === "sending"}>
+                  {status === "sending" ? "Sending..." : "Send message"}
                 </Button>
+                {status === "sent" && (
+                  <p className="text-sm text-muted-foreground">
+                    Thank you! Your message has been sent. I&apos;ll get back to you soon.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-destructive">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
