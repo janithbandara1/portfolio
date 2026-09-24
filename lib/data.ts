@@ -47,17 +47,6 @@ export const projects: Project[] = [
     image: "/projects/ai-podcast-clipper-saas.png",
   },
   {
-    title: "Course platform LMS⁠",
-    bullets: [
-      "Full-stack Next.js learning management system with admin content management, enrollment, and lesson tracking.",
-      "Integrated secure payment processing with purchasing power parity pricing.",
-      "Optimized server actions and caching for faster page loads, with role-based authentication securing user and admin routes.",
-    ],
-    tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
-    href: "https://course-platform-lms.vercel.app",
-    image: "/projects/course-platform-lms.png",
-  },
-  {
     title: "Spare Parts Web Application",
     bullets: [
       "Full-stack e-commerce platform for automotive spare parts management, built with Next.js 16, React 19, TypeScript, PostgreSQL, and Prisma.",
@@ -67,6 +56,17 @@ export const projects: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma"],
     href: "https://hexadrive.vercel.app",
     image: "/projects/spare-parts-web-application.png",
+  },
+  {
+    title: "Course platform LMS⁠",
+    bullets: [
+      "Full-stack Next.js learning management system with admin content management, enrollment, and lesson tracking.",
+      "Integrated secure payment processing with purchasing power parity pricing.",
+      "Optimized server actions and caching for faster page loads, with role-based authentication securing user and admin routes.",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Drizzle ORM"],
+    href: "https://course-platform-lms.vercel.app",
+    image: "/projects/course-platform-lms.png",
   },
 ];
 
