@@ -44,7 +44,7 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "FastAPI", "Modal", "Amazon S3"],
     href: "https://ai-podcast-clipper-frontend-pi.vercel.app",
-    image: "/projects/ai-podcast-clipper.png",
+    image: "/projects/ai-podcast-clipper-saas.png",
   },
   {
     title: "Course platform LMS⁠",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma"],
     href: "https://hexadrive.vercel.app",
-    image: "/projects/spare-parts.png",
+    image: "/projects/spare-parts-web-application.png",
   },
 ];
 
