@@ -78,9 +78,9 @@ function Caret() {
   return (
     <span
       aria-hidden="true"
-      className="relative inline-block h-[1.1em] w-0 align-text-bottom"
+      className="relative inline-block h-4 w-0 align-text-bottom"
     >
-      <span className="absolute left-0 top-0 h-full w-[2px] animate-caret-blink bg-zinc-300" />
+      <span className="absolute left-0 top-0 h-full w-0.5 animate-caret-blink bg-zinc-300" />
     </span>
   );
 }
@@ -112,16 +112,16 @@ export function CodeSnippet() {
   const revealed = prefersReducedMotion ? totalLength : typed;
 
   return (
-    <div className="mx-auto hidden w-full max-w-lg overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl md:block">
-      <div className="relative flex items-center gap-1.5 px-4 py-2.5">
-        <span className="size-2.5 rounded-full bg-red-500" />
-        <span className="size-2.5 rounded-full bg-yellow-500" />
-        <span className="size-2.5 rounded-full bg-green-500" />
-        <span className="absolute left-1/2 -translate-x-1/2 text-xs text-zinc-500">
+    <div className="mx-auto hidden w-full max-w-lg overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-2xl md:block">
+      <div className="relative flex items-center gap-2 px-4 py-3">
+        <span className="size-3 rounded-full bg-red-500" />
+        <span className="size-3 rounded-full bg-yellow-500" />
+        <span className="size-3 rounded-full bg-green-500" />
+        <span className="absolute left-1/2 -translate-x-1/2 text-sm text-zinc-500">
           profile.ts
         </span>
       </div>
-      <pre className="overflow-x-auto p-4 font-mono text-sm/6">
+      <pre className="overflow-x-auto p-6 font-mono text-sm/6">
         <code>
           {tokens.map((token, index) => {
             const start = tokenStarts[index];
