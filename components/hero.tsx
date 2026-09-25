@@ -14,7 +14,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:linear-gradient(to_bottom,#000_0%,transparent_100%)]"
         aria-hidden="true"
       />
-      <div className="relative mx-auto grid w-full max-w-5xl items-center gap-8 px-6 py-24 sm:py-32 md:grid-cols-2 lg:gap-12">
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-24 sm:py-32 md:grid-cols-2 lg:gap-16 lg:px-8">
         <div className="flex flex-col items-start gap-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <span className="relative flex h-2 w-2">
@@ -23,10 +23,10 @@ export function Hero() {
             </span>
             {hero.availability}
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-3xl lg:text-4xl">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-4xl lg:text-5xl">
             {hero.headline}
           </h1>
-          <p className="text-base text-muted-foreground sm:text-lg md:text-base lg:text-lg">
+          <p className="text-lg/8 text-muted-foreground">
             {hero.description}
           </p>
 

@@ -15,22 +15,22 @@ function getInitials(company: string) {
 export function Experience() {
   return (
     <section id="experience">
-      <div className="mx-auto w-full max-w-5xl px-6 py-24">
-        <div className="mb-12 flex flex-col gap-3">
-          <p className="text-sm font-medium text-primary">
+      <div className="mx-auto w-full max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mb-12 flex flex-col gap-2 sm:mb-16">
+          <p className="text-sm/6 font-semibold text-primary">
             Experience
           </p>
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Where I&apos;ve worked
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {experience.map((entry) => (
             <Card key={entry.company}>
               <CardContent>
                 <div className="flex gap-4">
-                  <div className="relative mt-0.5 flex size-12 flex-none items-center justify-center overflow-hidden rounded-lg border border-border bg-muted">
+                  <div className="relative mt-0.5 flex size-12 flex-none items-center justify-center overflow-hidden rounded-lg bg-muted ring-1 ring-border">
                     {entry.logo ? (
                       <Image
                         src={entry.logo}
@@ -45,7 +45,7 @@ export function Experience() {
                     )}
                   </div>
                   <div className="flex flex-1 flex-col">
-                    <p className="text-base font-medium">{entry.company}</p>
+                    <p className="text-lg font-semibold">{entry.company}</p>
                     <div className="mt-2 flex flex-col">
                       {entry.roles.map((item, index) => {
                         const isLast = index === entry.roles.length - 1;
@@ -65,7 +65,7 @@ export function Experience() {
                               <p className="text-sm text-muted-foreground">
                                 {item.period}
                               </p>
-                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                              <ul className="mt-2 list-disc space-y-1 pl-4 text-sm/6 text-muted-foreground">
                                 {item.bullets.map((bullet) => (
                                   <li key={bullet}>{bullet}</li>
                                 ))}

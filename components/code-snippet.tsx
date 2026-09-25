@@ -112,7 +112,7 @@ export function CodeSnippet() {
   const revealed = prefersReducedMotion ? totalLength : typed;
 
   return (
-    <div className="mx-auto hidden w-full max-w-md overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl md:block">
+    <div className="mx-auto hidden w-full max-w-lg overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950 shadow-xl md:block">
       <div className="relative flex items-center gap-1.5 px-4 py-2.5">
         <span className="size-2.5 rounded-full bg-red-500" />
         <span className="size-2.5 rounded-full bg-yellow-500" />
@@ -121,7 +121,7 @@ export function CodeSnippet() {
           profile.ts
         </span>
       </div>
-      <pre className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed">
+      <pre className="overflow-x-auto p-4 font-mono text-sm/6">
         <code>
           {tokens.map((token, index) => {
             const start = tokenStarts[index];

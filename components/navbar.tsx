@@ -23,7 +23,7 @@ export function Navbar() {
           <a
             key={link.href}
             href={link.href}
-            className="rounded-full px-2 py-1 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           >
             {link.label}
           </a>

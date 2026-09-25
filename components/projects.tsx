@@ -16,15 +16,15 @@ function getInitials(title: string) {
 export function Projects() {
   return (
     <section id="projects" className="bg-muted">
-      <div className="mx-auto w-full max-w-5xl px-6 py-24">
-        <div className="mb-12 flex flex-col gap-3">
-          <p className="text-sm font-medium text-primary">Projects</p>
-          <h2 className="text-3xl font-semibold tracking-tight">
+      <div className="mx-auto w-full max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mb-12 flex flex-col gap-2 sm:mb-16">
+          <p className="text-sm/6 font-semibold text-primary">Projects</p>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Things I&apos;ve built
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {projects.map((project) => (
             <Card
               key={project.title}
@@ -49,7 +49,7 @@ export function Projects() {
 
               <CardContent className="p-6">
                 <div className="flex items-start justify-between gap-4">
-                  <p className="text-base font-medium">{project.title}</p>
+                  <p className="text-lg font-semibold">{project.title}</p>
                   <div className="flex shrink-0 gap-3 text-muted-foreground">
                     <a
                       href={project.href}
@@ -63,13 +63,13 @@ export function Projects() {
                   </div>
                 </div>
 
-                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                <ul className="mt-2 list-disc space-y-1 pl-4 text-sm/6 text-muted-foreground">
                   {project.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
 
-                <div className="mt-2 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="secondary">
                       {tag}

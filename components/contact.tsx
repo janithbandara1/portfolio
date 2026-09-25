@@ -43,15 +43,15 @@ export function Contact() {
 
   return (
     <section id="contact">
-      <div className="mx-auto w-full max-w-5xl px-6 py-24">
-        <div className="mb-12 flex flex-col gap-3">
-          <p className="text-sm font-medium text-primary">Contact</p>
-          <h2 className="text-3xl font-semibold tracking-tight">
+      <div className="mx-auto w-full max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mb-12 flex flex-col gap-2 sm:mb-16">
+          <p className="text-sm/6 font-semibold text-primary">Contact</p>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Get in Touch
           </h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
           <div className="flex flex-col gap-4">
             <Card>
               <CardContent>
