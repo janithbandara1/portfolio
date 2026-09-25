@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CodeSnippet } from "@/components/code-snippet";
 import { hero } from "@/lib/data";
@@ -67,9 +68,15 @@ export function Hero() {
         </div>
 
         <CodeSnippet />
-
-
       </div>
+
+      <a
+        href="#about"
+        aria-label="Scroll to about section"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <ChevronDown className="size-6 motion-safe:animate-bounce" />
+      </a>
     </section>
   );
 }
